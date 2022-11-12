@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+    background-image:url({{url_for('static',filename='images/v870-tang-36.jpg')}});
+
+    background-size: cover;
+    background-position: center;
+}
+section{
+    width: 70%;
+    height: 60%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    background: transparent;
+    border:transparent;
+    margin-top: 10px;
+    margin-left: 15%;
+    border: 2px solid white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-radius: 50px;
+    box-shadow: 5px 3px 10px#000;
+    padding-bottom: 20px;
+}
+.header{
+    text-align: center;
+    padding: 15px;
+}
+input{
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50px;
+    border-style: none;
+    background-color:rgb(235, 165, 165);
+    color: white;
+}
+#register{
+    margin-left: 30%;
+    width: 100px;
+    height: 50px;
+
+}
+
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+    <header>
+        <h1 class="header">Register</h1>
+    </header>
+    <section>
+        <form method="post" action=" ">
+            <tr>
+                <td><input type="text" name="name" placeholder="Enter Name" class="in"/></td>
+            </tr><br><br>
+            <tr>
+
+                <td><input type="Number" name="age" placeholder="Enter Age" class="in"/></td>
+            </tr><br><br>
+            <tr>
+
+                <td><input type="text" name="gender" placeholder="Enter gender"></td>
+            </tr><br><br>
+            <tr>
+
+                <td><input type="email" name="email" placeholder="Enter Email" class="in"/></td>
+            </tr><br><br>
+            <tr>
+
+                <td><input type="Password" name="password" placeholder="Enter Password" class="in"/></td>
+            </tr><br><br>
+            <tr>
+
+                <td><input type="Number" name="phone" placeholder="Enter Phone Number" class="in"/></td>
+            </tr><br><br>
+            <tr>
+                <button id="register">
+                    Register
+                </button></tr>
+        </form>
+    </section>
+</body>
+</html>
