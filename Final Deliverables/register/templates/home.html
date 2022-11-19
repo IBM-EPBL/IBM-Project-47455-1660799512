@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/style.css')}}">
+    <style>
+        *{
+        margin:0px;
+        }
+       body{
+       background:url({{url_for('static',filename='images/home.jpg')}});
+       background-repeat: no-repeat;
+       background-size: cover;
+       background-position: center;
+       width: 100vw;
+       height: 100vh;
+       box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+       }
+       a{
+       color:white;
+       text-decoration:none;
+       }
+       .reg:hover{
+        background-color: pink;
+       }
+       .reg{
+        background-color: transparent;
+       }
+       button{
+       width:100px;
+       height:50px;
+       }
+       .container{
+        position:absolute;
+        left:62%;
+        top:40%;
+       }
+       #log:hover{
+        color:blue;
+       }
+       .full{
+        display:flex;
+       }
+       .text{
+        position:absolute;
+        left:10%;
+        top:40%;
+       }
+       .head_container{
+        display:flex;
+        justify-content:space-evenly;
+        background-color:grey;
+        padding:10px;
+       }
+        .btn:hover{
+        padding:15px;
+        background-color:black;1234567891
+        color:white;
+        }
+    </style>
+</head>
+<body>
+<div class="head_container">
+        <div class="btn"><a href="">Logo</a></div>
+        <h2 class="btn"><a href="{{url_for('add')}}">Signup</a></h2>
+        <h2 class="btn"><a href="{{url_for('login')}}">Signin</a></h2>
+        <h2 class="btn"><a href="">Help</a></h2>
+</div>
+<div class="full">
+    <div class="container">
+        <p><button class="reg"><a href="{{url_for('add')}}">Register</a></button></p><br><br>
+        <p><a href="{{url_for('login')}}" id="log">Login</a></p>
+    </div>
+    <div class="text">
+        <h2>Live healthy, stay young at heart</h2>
+    </div>
+ </div>
+</body>
+</html>

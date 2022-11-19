@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+</head>
+<body>
+<table border="1px">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Phone</th>
+    </tr>
+    {%for data in datas%}
+    <tr>
+        <td>{{data.ID}}</td>
+        <td>{{data.NAME}}</td>
+        <td>{{data.AGE}}</td>
+        <td>{{data.GENDER}}</td>
+        <td>{{data.EMAIL}}</td>
+        <td>{{data.PASSWORD}}</td>
+        <td>{{data.PHONE}}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
