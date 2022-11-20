@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Heart Disease Detection </title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename = 'style.css')}}"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Heart Disease Prediction</h1>
+
+
+    </header>
+    <form
+      action="{{ url_for('heart')}}"
+      method="POST"
+      enctype="multiport/form-data"
+    >
+      <div class="formclass">
+        <label>Age :</label>
+        <input type="text" name="age" /><br />
+        <label>Sex(1:Male,0:Female) :</label>
+        <input type="text" name="sex" /><br />
+        <label>Chest Pain Type :</label>
+        <input type="text" name="chest" /><br />
+        <label>BP :</label>
+        <input type="text" name="trestbps" /><br />
+        <label>Serum cholestoral in mg/dl :</label>
+        <input type="text" name="chol" /><br />
+        <label>Fbs :</label>
+        <input type="text" name="fbs" /><br />
+
+        <label>Restecg :</label>
+        <input type="text" name="restecg" /><br />
+        <label>Thala :</label>
+        <input type="text" name="thalach" /><br />
+        <label>Exang :</label>
+        <input type="text" name="exang" /><br />
+        <label>Oldpeak :</label>
+        <input type="text" name="oldpeak" /><br />
+        <label>Slope :</label>
+        <input type="text" name="slope" /><br />
+        <label>ca :</label>
+        <input type="text" name="ca" /><br />
+        <label>Thal :</label>
+        <input type="text" name="thal" /><br />
+
+        <input type="submit" />
+      </div>
+    </form>
+      <div class="resultclass">{{resultvalue}}</div>
+
+  </body>
+</html>

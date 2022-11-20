@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Health Diagnosis ML</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename = 'style.css')}}"
+    />
+    <style>
+      a{
+      text-decoration:none;
+      color:black;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 style=margin-left:"100px">Health Disease Prediction</h1>
+
+    </header>
+    <div class="frontpageclass">
+      <h2>Welcome!</h2>
+
+      <h2>About us</h2>
+      <p>
+        The major challenge in heart disease is its detection. There are instruments available which can
+predict heart disease but either they are expensive or are not efficient to calculate chance of heart
+disease in human. Early detection of cardiac diseases can decrease the mortality rate and overall
+complications. However, it is not possible to monitor patients every day in all cases accurately and
+consultation of a patient for 24 hours by a doctor is not available since it requires more sapience,
+time and expertise.So here is the solution you can predict disease by this web easily by entering the details
+      </p>
+
+      <h2>Heart Disease</h2>
+
+
+      <h3>Overview</h3>
+      <p>
+        Heart disease describes a range of conditions that affect your heart.
+        Diseases under the heart disease umbrella include blood vessel diseases,
+        such as coronary artery disease; heart rhythm problems (arrhythmias);
+        and heart defects you're born with (congenital heart defects), among
+        others. The term "heart disease" is often used interchangeably with the
+        term "cardiovascular disease." Cardiovascular disease generally refers
+        to conditions that involve narrowed or blocked blood vessels that can
+        lead to a heart attack, chest pain (angina) or stroke. Other heart
+        conditions, such as those that affect your heart's muscle, valves or
+        rhythm, also are considered forms of heart disease. Many forms of heart
+        disease can be prevented or treated with healthy lifestyle choices.
+      </p>
+       <image
+         class="heartimage"
+         src="{{url_for('static',filename='heartdisease.png')}}"
+         alt="Heart Disease
+       Picture"
+       />
+      <h3>Symptoms</h3>
+      <ul>
+        <li>
+          Chest pain, chest tightness, chest pressure and chest discomfort
+          (angina)
+        </li>
+        <li>Shortness of breath</li>
+        <li>
+          Pain, numbness, weakness or coldness in your legs or arms if the blood
+          vessels in those parts of your body are narrowed
+        </li>
+        <li>Pain in the neck, jaw, throat, upper abdomen or back</li>
+      </ul>
+      <h4> To check whether you are having heart disease or not use the below link </h4>
+      <a href="https://eu2.ca.analytics.ibm.com/bi/?perspective=dashboard&pathRef=.my_folders%2FDataVisualization_DB01&action=view&mode=dashboard&subView=model0000018436f4dea2_00000000"> Click here to visualize in the dashboard</a>">
+      <h4> Predict whether you are having disease or not </h4>
+      <form action="{{ url_for('heartt')}}"
+      method="POST"
+      enctype="multiport/form-data">
+        <div class="formclass">
+          <label>Age :</label>
+          <input type="text" name="age" /><br />
+          <label>Sex(1:Male,0:Female) :</label>
+          <input type="text" name="sex" /><br />
+          <label>Chest Pain Type :</label>
+          <input type="text" name="chest" /><br />
+          <label>BP :</label>
+          <input type="text" name="trestbps" /><br />
+          <label>Serum cholestoral in mg/dl :</label>
+          <input type="text" name="chol" /><br />
+          <label>Fbs :</label>
+          <input type="text" name="fbs" /><br />
+
+          <label>EKG :</label>
+          <input type="text" name="restecg" /><br />
+          <label>Max hr :</label>
+          <input type="text" name="thalach" /><br />
+          <label>Exercise angina :</label>
+          <input type="text" name="exang" /><br />
+          <label>St depression :</label>
+          <input type="text" name="oldpeak" /><br />
+          <label>Slope of st:</label>
+          <input type="text" name="slope" /><br />
+          <label>Number of vessels fluro :</label>
+          <input type="text" name="ca" /><br />
+          <label>Thallium :</label>
+          <input type="text" name="thal" /><br />
+          <button><a href="http://127.0.0.1:5000/output">Submit</a></button>
+        </div>
+      </form>
+
+    </div>
+
+  </body>
+</html>
